@@ -57,7 +57,7 @@ services:
       - "${HTTP_PORT:-8080}:80"    # http
       - "${HTTPS_PORT:-8443}:443"   # https
     volumes:
-      - ${WORDPRESS_LOCAL_HOME}:/var/www/html
+      - wordpress:/var/www/html
       - ${NGINX_CONF}:/etc/nginx/conf.d/default.conf
       - ${NGINX_SSL_CERTS}:/etc/ssl:ro
       - ${NGINX_LOGS}:/var/log/nginx
